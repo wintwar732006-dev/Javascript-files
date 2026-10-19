@@ -1,0 +1,14 @@
+.MyButtons{
+    font-size: 2rem; 
+    margin: 10px; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px; 
+    background-color: aqua; 
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}

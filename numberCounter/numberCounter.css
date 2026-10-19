@@ -1,0 +1,31 @@
+.body{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto; 
+    align-items: center;
+    min-height: 100hv; 
+}
+.counter{
+    text-align: center;
+}
+.buttons{
+    display: flex; 
+    justify-content: center;
+    gap: 10px; 
+
+}
+button{
+    border-radius: 10px; 
+    font-size: 20px; 
+    border-style: none;
+    background-color: black; 
+    color: white; 
+    padding: 10px; 
+}
+.counter h1{
+    font-size: 55px; 
+}
+.counter h2{
+    font-size: 60px; 
+}

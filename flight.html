@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyTicket - Premium Flight Ticketing Agency</title>
+  <link rel="stylesheet" href="flight.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts (Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            cloud: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              900: '#0c4a6e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Glassmorphic Navbar & Cards */
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+  </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-cloud-200 selection:text-cloud-900">
+
+  <!-- Transparent Floating Navigation Bar -->
+  <header class="fixed top-0 left-0 right-0 z-50 px-6 py-4">
+    <div class="max-w-7xl mx-auto glass-nav rounded-2xl px-6 py-3.5 flex items-center justify-between shadow-lg">
+      <!-- Agency Logo -->
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cloud-500 to-cloud-300 flex items-center justify-center text-white shadow-md shadow-cloud-500/30 group-hover:scale-105 transition-transform">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2H5z"></path>
+          </svg>
+        </div>
+        <span class="text-xl font-extrabold tracking-tight text-slate-900">Sky<span class="text-cloud-500">Ticket</span></span>
+      </a>
+
+      <!-- Menu Items -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-bold text-slate-700">
+        <a href="#home" class="text-cloud-600 transition-colors">Home</a>
+        <a href="#about" class="hover:text-cloud-600 transition-colors">Why Choose Us</a>
+        <a href="#services" class="hover:text-cloud-600 transition-colors">Services</a>
+        <a href="#destinations" class="hover:text-cloud-600 transition-colors">Destinations</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-4">
+        <a href="#contact" class="px-5 py-2.5 rounded-xl bg-cloud-600 text-white text-sm font-semibold hover:bg-cloud-700 transition-all duration-300 shadow-md shadow-cloud-600/30">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-Width Hero Section with Flying Airplane Background -->
+  <section id="home" class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+    
+    <!-- Hero Background Image (Full Width & Height Airplane Flying Above Clouds) -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="aero.jpg" 
+        alt="Aeroplane flying high above clouds" 
+        class="w-full h-full object-cover object-center scale-105"
+      />
+      <!-- Dark Gradient Overlays for Contrast & Readability -->
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/50 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-slate-950/30"></div>
+    </div>
+
+    <!-- Hero Overlay Content -->
+    <div class="max-w-7xl mx-auto px-6 pt-32 pb-20 relative z-10 w-full">
+      <div class="max-w-2xl space-y-8 text-left text-white">
+        
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-cloud-200 text-xs font-bold uppercase tracking-wider border border-white/20">
+          <span class="w-2 h-2 rounded-full bg-cloud-400 animate-pulse"></span>
+          Your Global Ticket Partner
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] text-white">
+          Fly Seamlessly <br />
+          <span class="bg-gradient-to-r from-cloud-300 via-cloud-200 to-white bg-clip-text text-transparent">Above The Clouds</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-slate-200 text-lg sm:text-xl font-normal leading-relaxed max-w-xl">
+          Connecting you to worldwide destinations with trusted airline ticket services, transparent pricing, and effortless travel solutions.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
+          <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-cloud-500 hover:bg-cloud-600 text-white font-semibold text-base shadow-xl shadow-cloud-500/30 hover:-translate-y-0.5 transition-all text-center">
+            Explore Services
+          </a>
+          <a href="#about" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-card text-white font-semibold text-base hover:bg-white/20 transition-all text-center border border-white/30">
+            Learn More
+          </a>
+        </div>
+
+        <!-- Highlights / Key Metrics -->
+        <div class="pt-8 border-t border-white/20 grid grid-cols-3 gap-6 max-w-md">
+          <div>
+            <p class="text-2xl sm:text-3xl font-extrabold text-white">500+</p>
+            <p class="text-xs text-cloud-200 font-medium mt-1">Airlines Partners</p>
+          </div>
+          <div>
+            <p class="text-2xl sm:text-3xl font-extrabold text-white">100%</p>
+            <p class="text-xs text-cloud-200 font-medium mt-1">Verified Booking</p>
+          </div>
+          <div>
+            <p class="text-2xl sm:text-3xl font-extrabold text-white">24/7</p>
+            <p class="text-xs text-cloud-200 font-medium mt-1">Flight Support</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean Feature Highlights Section -->
+  <section id="about" class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-cloud-500">Why Fly With Us</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Simple, Reliable & Transparent</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="p-8 rounded-2xl bg-slate-50/70 border border-slate-100 hover:border-cloud-200 hover:shadow-xl transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-cloud-100 text-cloud-600 flex items-center justify-center mb-6 group-hover:bg-cloud-500 group-hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Best Fares Guaranteed</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">We source competitive flight ticket prices directly from official global airline networks.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-8 rounded-2xl bg-slate-50/70 border border-slate-100 hover:border-cloud-200 hover:shadow-xl transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-cloud-100 text-cloud-600 flex items-center justify-center mb-6 group-hover:bg-cloud-500 group-hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">All Airlines Options</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Access full flight schedules and compare seats across hundreds of international carriers.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="p-8 rounded-2xl bg-slate-50/70 border border-slate-100 hover:border-cloud-200 hover:shadow-xl transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-cloud-100 text-cloud-600 flex items-center justify-center mb-6 group-hover:bg-cloud-500 group-hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Dedicated Assistance</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Personalized support for ticket modifications, date changes, and travel inquiries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-slate-50 border-t border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-slate-500">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-slate-900">SkyTicket Agency</span>
+        <span>© 2026 All rights reserved.</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-slate-900 transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-slate-900 transition-colors">Terms of Service</a>
+        <a href="#" class="hover:text-slate-900 transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

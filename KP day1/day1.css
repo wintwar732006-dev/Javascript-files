@@ -1,0 +1,10 @@
+.parent{
+    max-width: 80%; 
+    background-color: aquamarine;
+    padding: 3rem; 
+    margin: 0 auto; 
+}
+.child{
+    width: 70%; 
+    min-width: 40%; 
+}
